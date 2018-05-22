@@ -1,0 +1,26 @@
+{
+  "/pose": {
+    "target": "http://localhost:8081"
+  },
+  "/poses": {
+    "target": "http://localhost:8081"
+  },
+  "/gripper": {
+    "target": "http://localhost:8081"
+  },
+  "/position": {
+    "target": "http://localhost:8081"
+  },
+  "/positions": {
+    "target": "http://localhost:8081"
+  },
+  "/status": {
+    "target": "http://localhost:8081"
+  },
+  "/relax": {
+    "target": "http://localhost:8081"
+  },
+  "/freeze": {
+    "target": "http://localhost:8081"
+  }
+}
