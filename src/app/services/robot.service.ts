@@ -8,6 +8,7 @@ import {PoseJson, PositionJson} from './model';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/takeWhile';
 import 'rxjs/add/observable/interval';
 import 'rxjs/add/operator/skipWhile';
@@ -48,7 +49,7 @@ export class RobotService {
   }
 
   getPosition(): Observable<Position> {
-    return this.http.get<PositionJson>('/position').map(this.converter.convertPositionJson);
+    return this.http.get<PositionJson>('/position').map(this.converter.convertPositionJson).do(p => console.log(p));
   }
 
   setPosition(position: Position, speed?: number, time?: number): Observable<Position> {
