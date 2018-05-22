@@ -72,11 +72,11 @@ export class RobotService {
   }
 
   openGripper(): Observable<any> {
-    return this.http.put('/gripper/open', {});
+    return this.http.put('/gripper/close', {});
   }
 
   closeGripper(): Observable<any> {
-    return this.http.put('/gripper/close', {});
+    return this.http.put('/gripper/open', {});
   }
 
   freeze(): Observable<any> {
