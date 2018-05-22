@@ -38,8 +38,8 @@ export class Program1 implements Program {
   private static INTERMEDIATE_1: Position = { x: Program1.TAKE_X + 0.15, y: Program1.TAKE_Y, z: Program1.TAKE_Z + 0.2, roll: Program1.TAKE_ROLL, pitch: Program1.TAKE_PITCH, yaw: Program1.TAKE_YAW};
   private static INTERMEDIATE_2: Position = { x: Program1.TAKE_X + 0.2, y: Program1.TAKE_Y + 0.2, z: Program1.TAKE_Z + 0.3, roll: Program1.TAKE_ROLL, pitch: Program1.TAKE_PITCH, yaw: Program1.TAKE_YAW};
   private static INTERMEDIATE_3: Position = { x: Program1.TAKE_X + 0.2, y: Program1.TAKE_Y + 0.3, z: Program1.TAKE_Z + 0.4, roll: Program1.TAKE_ROLL, pitch: Program1.TAKE_PITCH, yaw: Program1.TAKE_YAW};
-  private static INTERMEDIATE_4: Position = { x: Program1.TAKE_X + 0.25, y: Program1.TAKE_Y + 0.3, z: Program1.TAKE_Z + 0.44, roll: Program1.TAKE_ROLL - 0.2, pitch: Program1.TAKE_PITCH, yaw: Program1.TAKE_YAW - 0.2};
-  private static INTERMEDIATE_5: Position = { x: Program1.TAKE_X + 0.45, y: Program1.TAKE_Y + 0.3, z: Program1.TAKE_Z + 0.44, roll: Program1.TAKE_ROLL - 0.2, pitch: Program1.TAKE_PITCH, yaw: Program1.TAKE_YAW - 0.24};
+  private static INTERMEDIATE_4: Position = { x: Program1.TAKE_X + 0.15, y: Program1.TAKE_Y + 0.3, z: Program1.TAKE_Z + 0.44, roll: Program1.TAKE_ROLL - 0.2, pitch: Program1.TAKE_PITCH, yaw: Program1.TAKE_YAW - 0.2};
+  private static INTERMEDIATE_5: Position = { x: Program1.TAKE_X - 0.05, y: Program1.TAKE_Y + 0.3, z: Program1.TAKE_Z + 0.44, roll: Program1.TAKE_ROLL - 0.2, pitch: Program1.TAKE_PITCH, yaw: Program1.TAKE_YAW - 0.24};
 
   private static AFTER_1: Position = { x: Program1.TAKE_X + 0.49, y: Program1.TAKE_Y + 0.3, z: Program1.TAKE_Z + 0.44, roll: Program1.TAKE_ROLL - 0.2, pitch: Program1.TAKE_PITCH, yaw: Program1.TAKE_YAW - 0.24};
   private static AFTER_2: Position = { x: Program1.TAKE_X + 0.55, y: Program1.TAKE_Y + 0.3, z: Program1.TAKE_Z + 0.44, roll: Program1.TAKE_ROLL - 0.2, pitch: Program1.TAKE_PITCH, yaw: Program1.TAKE_YAW - 0.24};

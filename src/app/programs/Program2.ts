@@ -2,6 +2,7 @@ import {Program} from './program';
 import {RobotService} from '../services/robot.service';
 import {Observable} from 'rxjs';
 import {Pose, Position} from '../model';
+import {Program1} from './Program1';
 
 export class Program2 implements Program {
   private static INITIAL_ROLL = - Math.PI / 4;
@@ -37,8 +38,8 @@ export class Program2 implements Program {
   private static INTERMEDIATE_1: Position = { x: Program2.TAKE_X + 0.15, y: Program2.TAKE_Y, z: Program2.TAKE_Z + 0.2, roll: Program2.TAKE_ROLL, pitch: Program2.TAKE_PITCH, yaw: Program2.TAKE_YAW};
   private static INTERMEDIATE_2: Position = { x: Program2.TAKE_X + 0.2, y: Program2.TAKE_Y + 0.2, z: Program2.TAKE_Z + 0.3, roll: Program2.TAKE_ROLL, pitch: Program2.TAKE_PITCH, yaw: Program2.TAKE_YAW};
   private static INTERMEDIATE_3: Position = { x: Program2.TAKE_X + 0.2, y: Program2.TAKE_Y + 0.3, z: Program2.TAKE_Z + 0.4, roll: Program2.TAKE_ROLL, pitch: Program2.TAKE_PITCH, yaw: Program2.TAKE_YAW};
-  private static INTERMEDIATE_4: Position = { x: Program2.TAKE_X + 0.25, y: Program2.TAKE_Y + 0.3, z: Program2.TAKE_Z + 0.44, roll: Program2.TAKE_ROLL - 0.2, pitch: Program2.TAKE_PITCH, yaw: Program2.TAKE_YAW - 0.2};
-  private static INTERMEDIATE_5: Position = { x: Program2.TAKE_X + 0.45, y: Program2.TAKE_Y + 0.3, z: Program2.TAKE_Z + 0.44, roll: Program2.TAKE_ROLL - 0.2, pitch: Program2.TAKE_PITCH, yaw: Program2.TAKE_YAW - 0.24};
+  private static INTERMEDIATE_4: Position = { x: Program2.TAKE_X + 0.15, y: Program2.TAKE_Y + 0.3, z: Program2.TAKE_Z + 0.44, roll: Program2.TAKE_ROLL - 0.2, pitch: Program2.TAKE_PITCH, yaw: Program2.TAKE_YAW - 0.2};
+  private static INTERMEDIATE_5: Position = { x: Program2.TAKE_X - 0.05, y: Program2.TAKE_Y + 0.3, z: Program2.TAKE_Z + 0.44, roll: Program2.TAKE_ROLL - 0.2, pitch: Program2.TAKE_PITCH, yaw: Program2.TAKE_YAW - 0.24};
 
   private static AFTER_1: Position = { x: Program2.TAKE_X + 0.49, y: Program2.TAKE_Y + 0.3, z: Program2.TAKE_Z + 0.44, roll: Program2.TAKE_ROLL - 0.2, pitch: Program2.TAKE_PITCH, yaw: Program2.TAKE_YAW - 0.24};
   private static AFTER_2: Position = { x: Program2.TAKE_X + 0.55, y: Program2.TAKE_Y + 0.3, z: Program2.TAKE_Z + 0.44, roll: Program2.TAKE_ROLL - 0.2, pitch: Program2.TAKE_PITCH, yaw: Program2.TAKE_YAW - 0.24};
