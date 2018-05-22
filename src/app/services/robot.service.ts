@@ -6,14 +6,16 @@ import {ConverterService} from './converter.service';
 import {PoseJson} from './model';
 
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/takeWhile';
 import 'rxjs/add/observable/interval';
+import 'rxjs/add/operator/skipWhile';
 
 @Injectable()
 export class RobotService {
 
-  private  static TIMEOUT = 100; // 100 milliseconds
+  private  static TIMEOUT = 500; // 100 milliseconds
 
   private static fillSpeedAndTime(speed?: number, time?: number): HttpParams {
     let params = new HttpParams();
@@ -90,7 +92,8 @@ export class RobotService {
   private waitMoving(action: () => Observable<any>): Observable<string> {
     return action().flatMap(() =>
       Observable.interval(RobotService.TIMEOUT).flatMap(() => this.status())
-        .takeWhile(status => status === 'RUNNING')
+        .skipWhile(status => status === 'RUNNING')
+        .take(1)
     );
   }
 
