@@ -68,7 +68,8 @@ export class RobotService {
 
   runPositions(positions: Position[], speed?: number, time?: number): Observable<Position> {
     const params = RobotService.fillSpeedAndTime(speed, time);
-    const action = () => this.http.put('/positions/run', positions, { params: params });
+    const positionsJson = positions.map(p => this.converter.convertPosition(p));
+    const action = () => this.http.put('/positions/run', positionsJson, { params: params });
 
     return this.waitMoving(action).flatMap(() => this.getPosition());
   }
