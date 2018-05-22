@@ -2,7 +2,6 @@ import {Program} from './program';
 import {RobotService} from '../services/robot.service';
 import {Observable} from 'rxjs';
 import {Pose, Position} from '../model';
-import {Program1} from './Program1';
 
 export class Program2 implements Program {
   private static INITIAL_ROLL = - Math.PI / 4;
@@ -19,7 +18,7 @@ export class Program2 implements Program {
   private static TAKE_PITCH = Math.PI / 2;
   private static TAKE_YAW = - Math.PI / 4 - 0.01;
 
-  private static SPEED = 60;
+  private static SPEED = 300;
 
   private static HOME_POSE: Pose = {a1: 0, a2: 90, a3: 0, a4: -90, a5: 90, a6: 0};
   private static BEFORE_HOME: Position = {x: 0.49, y: 0.53, z: 0.72, roll: 1.5707893371582031, pitch: 0.5760120749473572, yaw: -0.9601222276687622};
