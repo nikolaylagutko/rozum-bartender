@@ -41,7 +41,7 @@ export class Program2 implements Program {
   private static INTERMEDIATE_4: Position = { x: Program2.TAKE_X + 0.15, y: Program2.TAKE_Y + 0.3, z: Program2.TAKE_Z + 0.44, roll: Program2.TAKE_ROLL - 0.2, pitch: Program2.TAKE_PITCH, yaw: Program2.TAKE_YAW - 0.2};
   private static INTERMEDIATE_5: Position = { x: Program2.TAKE_X - 0.05, y: Program2.TAKE_Y + 0.3, z: Program2.TAKE_Z + 0.44, roll: Program2.TAKE_ROLL - 0.2, pitch: Program2.TAKE_PITCH, yaw: Program2.TAKE_YAW - 0.24};
 
-  private static AFTER_1: Position = { x: Program2.TAKE_X + 0.49, y: Program2.TAKE_Y + 0.3, z: Program2.TAKE_Z + 0.44, roll: Program2.TAKE_ROLL - 0.2, pitch: Program2.TAKE_PITCH, yaw: Program2.TAKE_YAW - 0.24};
+  private static AFTER_1: Position = { x: Program2.TAKE_X - 0.01, y: Program2.TAKE_Y + 0.3, z: Program2.TAKE_Z + 0.44, roll: Program2.TAKE_ROLL - 0.2, pitch: Program2.TAKE_PITCH, yaw: Program2.TAKE_YAW - 0.24};
   private static AFTER_2: Position = { x: Program2.TAKE_X + 0.55, y: Program2.TAKE_Y + 0.3, z: Program2.TAKE_Z + 0.44, roll: Program2.TAKE_ROLL - 0.2, pitch: Program2.TAKE_PITCH, yaw: Program2.TAKE_YAW - 0.24};
 
 
