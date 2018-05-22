@@ -3,7 +3,7 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {Pose, Position} from '../model';
 import {ConverterService} from './converter.service';
-import {PoseJson} from './model';
+import {PoseJson, PositionJson} from './model';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
@@ -48,7 +48,7 @@ export class RobotService {
   }
 
   getPosition(): Observable<Position> {
-    return this.http.get<Position>('/position');
+    return this.http.get<PositionJson>('/position').map(this.converter.convertPositionJson);
   }
 
   setPosition(position: Position, speed?: number, time?: number): Observable<Position> {
@@ -61,7 +61,8 @@ export class RobotService {
 
   runPoses(poses: Pose[], speed?: number, time?: number): Observable<Pose> {
     const params = RobotService.fillSpeedAndTime(speed, time);
-    const action = () => this.http.put('/poses/run', poses, { params: params});
+    const posesJson = poses.map(p => this.converter.convertPose(p));
+    const action = () => this.http.put('/poses/run', posesJson, { params: params});
 
     return this.waitMoving(action).flatMap(() => this.getPose());
   }

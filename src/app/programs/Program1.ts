@@ -29,7 +29,7 @@ export class Program1 implements Program {
   private static BEFORE_3: Position = { x: Program1.INITIAL_X + 0.2, y: Program1.INITIAL_Y, z: Program1.INITIAL_Z + 0.15, roll: Program1.INITIAL_ROLL, pitch: Program1.INITIAL_PITCH - 0.2, yaw: Program1.INITIAL_YAW};
   private static BEFORE_4: Position = { x: Program1.INITIAL_X + 0.35, y: Program1.INITIAL_Y, z: Program1.INITIAL_Z + 0.3, roll: Program1.INITIAL_ROLL, pitch: Program1.INITIAL_PITCH - 0.6, yaw: Program1.INITIAL_YAW};
   private static BEFORE_5: Position = { x: Program1.INITIAL_X + 0.4, y: Program1.INITIAL_Y + 0.02, z: Program1.INITIAL_Z + 0.44, roll: Program1.INITIAL_ROLL - 0.3, pitch: Program1.INITIAL_PITCH - 1.0, yaw: Program1.INITIAL_YAW};
-  private static BEFORE_6: Position = { x: 0.73, y: 0.51, z: 0.64, roll: 1.57, pitch: 0.26, yaw: 1.65};
+  private static BEFORE_6: Position = { x: 0.7325093897042189, y: 0.5138609462741055, z: 0.6483402541993144, roll: 1.570788860321045, pitch: 0.2617891728878021, yaw: -1.658217191696167};
 
   private static TAKE_1: Position = { x: Program1.TAKE_X, y: Program1.TAKE_Y, z: Program1.TAKE_Z, roll: Program1.TAKE_ROLL, pitch: Program1.TAKE_PITCH, yaw: Program1.TAKE_YAW};
 
