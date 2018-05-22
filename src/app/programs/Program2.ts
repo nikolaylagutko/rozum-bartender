@@ -48,7 +48,7 @@ export class Program2 implements Program {
 
   run(service: RobotService): Observable<any> {
     return service.openGripper().flatMap(() =>
-      service.setPose(Program2.HOME_POSE)
+      service.setPosition(Program2.HOME, Program2.SPEED)
     ).flatMap(() =>
       service.runPositions([
         Program2.BEFORE_6, Program2.BEFORE_5, Program2.BEFORE_4, Program2.BEFORE_3, Program2.BEFORE_2, Program2.BEFORE_1
