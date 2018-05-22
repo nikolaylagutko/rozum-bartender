@@ -16,12 +16,12 @@ export class RobotService {
   private  static TIMEOUT = 100; // 100 milliseconds
 
   private static fillSpeedAndTime(speed?: number, time?: number): HttpParams {
-    const params = new HttpParams();
+    let params = new HttpParams();
     if (speed) {
-      params.set('speed', speed.toString());
+      params = params.set('speed', speed.toString());
     }
     if (time) {
-      params.set('time', time.toString());
+      params = params.set('time', time.toString());
     }
 
     return params;
