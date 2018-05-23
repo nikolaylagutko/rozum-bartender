@@ -5,7 +5,10 @@ cd `dirname $0`/..
 echo "Prepare directories"
 
 mkdir -p /opt/pulse-desk-bartender
+mkdir -p /opt/pulse-desk-bartender/node_modules
 rm -rf node_modules
+
+chmod -R a+rwx /opt/pulse-desk-bartender/node_modules
 
 echo "Copy sources"
 

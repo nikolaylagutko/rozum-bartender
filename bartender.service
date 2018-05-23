@@ -5,7 +5,7 @@ After=syslog.target
 [Service]
 WorkingDirectory=/opt/pulse-desk-bartender
 User=root
-ExecStart=/usr/local/bin/npm start
+ExecStart=/usr/bin/npm start
 SuccessExitStatus=143
 
 [Install]
