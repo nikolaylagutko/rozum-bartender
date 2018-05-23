@@ -5,8 +5,6 @@ import {AppComponent} from './app.component';
 import {RobotService} from './services/robot.service';
 import {ConverterService} from './services/converter.service';
 import {BusyModule} from 'angular2-busy';
-import {AlertModule} from 'ngx-bootstrap/alert';
-import {ModalModule} from 'ngx-bootstrap/modal';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -17,8 +15,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     BusyModule,
-    AlertModule.forRoot(),
-    ModalModule.forRoot(),
     HttpClientModule,
     BrowserAnimationsModule
   ],

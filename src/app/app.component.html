@@ -1,15 +1,4 @@
 <div [ngBusy]="busy">
-  <button (click)="runProgram1()">Program 1</button>
-  <button (click)="runProgram2()">Program 2</button>
+  <button style="width: 40%; margin: 20px; font-size: 80px; height: 400px;" (click)="runProgram1()">Вода 1</button>
+  <button style="width: 40%; margin: 20px; font-size: 80px; height: 400px;" (click)="runProgram2()">Вода 2</button>
 </div>
-
-<ng-template #template>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Робот-Бармен</h4>
-  </div>
-  <div class="modal-body">
-    <alert type="success">
-      Программа завершена!
-    </alert>
-  </div>
-</ng-template>

@@ -1,10 +1,8 @@
-import {Component, TemplateRef, ViewChild} from '@angular/core';
+import {Component} from '@angular/core';
 import {RobotService} from './services/robot.service';
 import {Program} from './programs/program';
-import {Program1} from './programs/Program1';
 import {Program2} from './programs/Program2';
 import {Subscription} from 'rxjs';
-import {BsModalService} from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -13,15 +11,12 @@ import {BsModalService} from 'ngx-bootstrap';
 })
 export class AppComponent {
 
-  private program1 = new Program1();
+  private program1 = new Program2();
   private program2 = new Program2();
-
-  @ViewChild('template')
-  template: TemplateRef<any>;
 
   busy: Subscription;
 
-  constructor(private service: RobotService, private modal: BsModalService) { }
+  constructor(private service: RobotService) { }
 
   runProgram1() {
     this.execute(this.program1);
@@ -32,10 +27,10 @@ export class AppComponent {
   }
 
   private execute(program: Program) {
-    this.busy = program.run(this.service).subscribe(() => this.finish());
+    this.busy = program.run(this.service).subscribe(() => AppComponent.finish());
   }
 
-  private finish() {
+  private static finish() {
     console.log('Finished');
   }
 
