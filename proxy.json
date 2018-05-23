@@ -1,26 +1,26 @@
 {
   "/pose": {
-    "target": "http://localhost:8081"
+    "target": "http://localhost:8080"
   },
   "/poses": {
-    "target": "http://localhost:8081"
+    "target": "http://localhost:8080"
   },
   "/gripper": {
-    "target": "http://localhost:8081"
+    "target": "http://localhost:8080"
   },
   "/position": {
-    "target": "http://localhost:8081"
+    "target": "http://localhost:8080"
   },
   "/positions": {
-    "target": "http://localhost:8081"
+    "target": "http://localhost:8080"
   },
   "/status": {
-    "target": "http://localhost:8081"
+    "target": "http://localhost:8080"
   },
   "/relax": {
-    "target": "http://localhost:8081"
+    "target": "http://localhost:8080"
   },
   "/freeze": {
-    "target": "http://localhost:8081"
+    "target": "http://localhost:8080"
   }
 }
