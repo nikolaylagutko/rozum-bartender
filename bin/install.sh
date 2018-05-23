@@ -22,4 +22,5 @@ if [ "$(systemctl is-enabled bartender)" != "enabled" ] ; then
     systemctl enable /opt/pulse-desk-bartender/bartender.service
 fi
 
+systemctl daemon-reload
 systemctl restart bartender
