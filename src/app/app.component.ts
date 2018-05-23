@@ -36,7 +36,7 @@ export class AppComponent {
   }
 
   private finish() {
-    this.modal.show(this.template);
+    console.log('Finished');
   }
 
 }
