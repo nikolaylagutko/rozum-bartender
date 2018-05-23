@@ -1,0 +1,26 @@
+{
+  "/pose": {
+    "target": "http://192.168.2.3:8081"
+  },
+  "/poses": {
+    "target": "http://192.168.2.3:8081"
+  },
+  "/gripper": {
+    "target": "http://192.168.2.3:8081"
+  },
+  "/position": {
+    "target": "http://192.168.2.3:8081"
+  },
+  "/positions": {
+    "target": "http://192.168.2.3:8081"
+  },
+  "/status": {
+    "target": "http://192.168.2.3:8081"
+  },
+  "/relax": {
+    "target": "http://192.168.2.3:8081"
+  },
+  "/freeze": {
+    "target": "http://192.168.2.3:8081"
+  }
+}
