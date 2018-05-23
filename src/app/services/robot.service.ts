@@ -26,6 +26,7 @@ export class RobotService {
     if (time) {
       params = params.set('time', time.toString());
     }
+    params = params.set('solution', 'full');
 
     return params;
   }

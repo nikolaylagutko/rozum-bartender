@@ -1,26 +1,26 @@
 {
   "/pose": {
-    "target": "http://192.168.2.3:8081"
+    "target": "http://127.0.0.1:8080"
   },
   "/poses": {
-    "target": "http://192.168.2.3:8081"
+    "target": "http://127.0.0.1:8080"
   },
   "/gripper": {
-    "target": "http://192.168.2.3:8081"
+    "target": "http://127.0.0.1:8080"
   },
   "/position": {
-    "target": "http://192.168.2.3:8081"
+    "target": "http://127.0.0.1:8080"
   },
   "/positions": {
-    "target": "http://192.168.2.3:8081"
+    "target": "http://127.0.0.1:8080"
   },
   "/status": {
-    "target": "http://192.168.2.3:8081"
+    "target": "http://127.0.0.1:8080"
   },
   "/relax": {
-    "target": "http://192.168.2.3:8081"
+    "target": "http://127.0.0.1:8080"
   },
   "/freeze": {
-    "target": "http://192.168.2.3:8081"
+    "target": "http://127.0.0.1:8080"
   }
 }

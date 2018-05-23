@@ -20,7 +20,8 @@ export class Program2 implements Program {
 
   private static SPEED = 300;
 
-  private static HOME: Position = {x:0.027285461193086225,y:0.08152329027535066,z:0.8884755941991413, roll:0.7619790434837341,pitch:1.5706918239593506,yaw:0.8088154196739197};
+  private static HOME_POSE: Pose = {a1: 0, a2: 90, a3: 0, a4: -90, a5: 90, a6: 0};
+  private static HOME: Position = {x:0.027305309361239316,y:0.08149639068657356,z:0.8884717275149439, roll:-0.12697279453277588,pitch:1.5707080364227295,yaw:1.6977672576904297};
   private static BEFORE_HOME: Position = {x: 0.49, y: 0.53, z: 0.72, roll: 1.5707893371582031, pitch: 0.5760120749473572, yaw: -0.9601222276687622};
 
   private static BEFORE_6 = {x:0.7326028706121241,y:0.5138693386044813,z:0.6482596496122165, roll:1.5708247423171997,pitch:0.26176273822784424,yaw:-1.6584539413452148};
@@ -48,7 +49,7 @@ export class Program2 implements Program {
 
   run(service: RobotService): Observable<any> {
     return service.openGripper().flatMap(() =>
-      service.setPosition(Program2.HOME, Program2.SPEED)
+      service.setPose(Program2.HOME_POSE, Program2.SPEED)
     ).flatMap(() =>
       service.runPositions([
         Program2.BEFORE_6, Program2.BEFORE_5, Program2.BEFORE_4, Program2.BEFORE_3, Program2.BEFORE_2, Program2.BEFORE_1

@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, TemplateRef, ViewChild} from '@angular/core';
 import {RobotService} from './services/robot.service';
 import {Program} from './programs/program';
 import {Program1} from './programs/Program1';
 import {Program2} from './programs/Program2';
 import {Subscription} from 'rxjs';
+import {BsModalService} from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -15,9 +16,12 @@ export class AppComponent {
   private program1 = new Program1();
   private program2 = new Program2();
 
+  @ViewChild('template')
+  template: TemplateRef<any>;
+
   busy: Subscription;
 
-  constructor(private service: RobotService) { }
+  constructor(private service: RobotService, private modal: BsModalService) { }
 
   runProgram1() {
     this.execute(this.program1);
@@ -32,7 +36,7 @@ export class AppComponent {
   }
 
   private finish() {
-    alert('Executed!');
+    this.modal.show(this.template);
   }
 
 }
