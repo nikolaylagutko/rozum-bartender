@@ -11,7 +11,7 @@ export class ConverterService {
 
   convertPose(pose: Pose): PoseJson {
     return {
-      angles: [ pose.a1, pose.a2, pose.a3, pose.a4, pose.a5, pose.a6 ]
+      angles: [pose.a1, pose.a2 - 180, pose.a3, pose.a4, -pose.a5, pose.a6]
     };
   }
 
@@ -51,5 +51,6 @@ export class ConverterService {
       yaw: position.rotation.yaw
     };
   }
-
 }
+
+

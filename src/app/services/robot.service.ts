@@ -16,7 +16,7 @@ import 'rxjs/add/operator/skipWhile';
 @Injectable()
 export class RobotService {
 
-  private  static TIMEOUT = 500; // 100 milliseconds
+  private  static TIMEOUT = 100; // 100 milliseconds
 
   private static fillSpeedAndTime(speed?: number, time?: number): HttpParams {
     let params = new HttpParams();
@@ -50,7 +50,7 @@ export class RobotService {
   }
 
   getPosition(): Observable<Position> {
-    return this.http.get<PositionJson>('/position').map(this.converter.convertPositionJson).do(p => console.log(p));
+    return this.http.get<PositionJson>('/position').map(this.converter.convertPositionJson);
   }
 
   setPosition(position: Position, speed?: number, time?: number): Observable<Position> {
@@ -78,11 +78,11 @@ export class RobotService {
   }
 
   openGripper(): Observable<any> {
-    return this.http.put('/gripper/close', {});
+    return this.http.put('/gripper/open', {});
   }
 
   closeGripper(): Observable<any> {
-    return this.http.put('/gripper/open', {});
+    return this.http.put('/gripper/close', {});
   }
 
   freeze(): Observable<any> {
