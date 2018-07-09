@@ -46,7 +46,7 @@ export class RobotService {
     const poseJson = this.converter.convertPose(pose);
     const action = () => this.http.put('/pose', poseJson, { params: params });
 
-    return this.waitMoving(action).flatMap(() => this.getPose());
+    return this.waitMoving(action).flatMap(() => this.getPosition()).do(console.log).flatMap(() => this.getPose());
   }
 
   getPosition(): Observable<Position> {
